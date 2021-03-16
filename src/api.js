@@ -5,13 +5,11 @@ const app = express();
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.json({
+  res.send(json({
     name: "Jason",
     residence: "Canada",
-    character: "brilliant"
-
-
-  });
+    character: "brilliant",
+  }));
 });
 
 app.use(`/.netlify/functions/api`, router);
