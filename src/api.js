@@ -12,7 +12,8 @@ app.use(cors());
 router.get("/", (req, res) => {
   let name = req.query.name;
 
-  let rawdata = fs.readFileSync('./JSON/transactions.json');
+  let rawdata = fs.readFileSync('./transactions.json');
+  //let rawdata = fs.readFileSync('./JSON/transactions.json');
   let student = JSON.parse(rawdata);
   let aaa = JSON.stringify(student);
   res.send(aaa);
