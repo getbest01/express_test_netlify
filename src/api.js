@@ -1,17 +1,20 @@
 const express = require("express");
 const cors = require("cors");
 const serverless = require("serverless-http");
+const fs = require("fs");
 
 const app = express();
 const router = express.Router();
 
 app.use(cors());
 
+
 router.get("/", (req, res) => {
   let name = req.query.name;
-  let hobby = req.query.hobby;
-  let aaa = `name: ${name} hobby: ${hobby}`;
-  //console.log(res)
+
+  let rawdata = fs.readFileSync('./JSON/transactions.json');
+  let student = JSON.parse(rawdata);
+  let aaa = JSON.stringify(student);
   res.send(aaa);
 });
 

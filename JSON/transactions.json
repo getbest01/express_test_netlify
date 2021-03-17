@@ -1,0 +1,16 @@
+{
+  "transaction": [
+    {
+      "id": "trx-001",
+      "type": "Earned",
+      "desc": "Salary",
+      "value": "50000"
+    },
+    {
+      "id": "trx-002",
+      "type": "Spent",
+      "desc": "Oil change",
+      "value": "85"
+    }
+  ]
+}
